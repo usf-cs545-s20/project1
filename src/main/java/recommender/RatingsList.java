@@ -128,7 +128,7 @@ public class RatingsList implements Iterable<RatingNode> {
      * shorter than size n, it will return the whole list.
      *
      * @param n the maximum number of movies to return
-     * @return recommender.RatingsList containing movies rated as 5
+     * @return recommender.RatingsList containing first n movie ratings
      */
     public RatingsList getNBestRankedMovies(int n) {
         // FILL IN CODE
