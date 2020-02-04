@@ -27,6 +27,9 @@ public class MovieRecommenderTest {
         int count = 0;
         try {
             count = TestUtils.checkFiles(expected, actual);
+            //System.out.println(count);
+            if (count <= 0)
+                Assert.fail("Recommendations do not match expected recommendations.");
         } catch (IOException e) {
             Assert.fail(" File check failed: " + e.getMessage());
         }
@@ -48,6 +51,8 @@ public class MovieRecommenderTest {
         int count = 0;
         try {
             count = TestUtils.checkFiles(expected, actual);
+            if (count <= 0)
+                Assert.fail("Anti-recommendations do not match expected anti-recommendations.");
         } catch (IOException e) {
             Assert.fail(" File check failed: " + e.getMessage());
         }

@@ -40,6 +40,8 @@ public class UsersListTest {
         int count = 0;
         try {
             count = TestUtils.checkFiles(expected, actual);
+            if (count <= 0)
+                Assert.fail("testUsersList Failed. Expected result is not equal to the actual result.");
         } catch (IOException e) {
             Assert.fail(" File check failed: " + e.getMessage());
         }
